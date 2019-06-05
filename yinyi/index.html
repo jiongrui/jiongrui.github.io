@@ -25,10 +25,20 @@
   </head>
   <body>
     <div class="container">
-      <div class="view-pdf"><a href="zuopin_1.pdf">查看PDF</a></div>
-      <div class="img-box">
-        <img src="./zuopin_1.jpeg" />
+      <div class="view-pdf">
+        <a href="zuopin_1.pdf">查看PDF</a>
       </div>
+      <div class="img-box" id="imgBox"></div>
     </div>
+    <script>
+      var fragment = document.createDocumentFragment();
+      for (let i = 1, ii = 19; i <= ii; i++) {
+        var img = document.createElement("img");
+        var srcPrev = i < 10 ? "images/zuopinji_yy_0" : "images/zuopinji_yy_";
+        img.src = srcPrev + i + ".jpg";
+        fragment.appendChild(img);
+      }
+      document.getElementById("imgBox").appendChild(fragment);
+    </script>
   </body>
 </html>
