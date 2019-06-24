@@ -11,26 +11,27 @@
         margin: 0;
         padding: 0;
       }
-      .view-pdf {
-        margin: 10px 0;
-      }
       .container .img-box img {
+        display: block;
         width: 100%;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <div class="view-pdf">
-        <a href="zuopin_1.pdf">查看PDF</a>
-      </div>
       <div class="img-box" id="imgBox"></div>
     </div>
     <script>
       var fragment = document.createDocumentFragment();
-      for (let i = 1, ii = 19; i <= ii; i++) {
+      for (let i = 1, ii = 11; i <= ii; i++) {
         var img = document.createElement("img");
-        var srcPrev = i < 10 ? "images/zuopinji_yy_0" : "images/zuopinji_yy_";
+        var srcPrev = i < 10 ? "images/zuopin1_0" : "images/zuopin1_";
+        img.src = srcPrev + i + ".jpg";
+        fragment.appendChild(img);
+      }
+      for (let i = 1, ii = 24; i <= ii; i++) {
+        var img = document.createElement("img");
+        var srcPrev = i < 10 ? "images/zuopin2_0" : "images/zuopin2_";
         img.src = srcPrev + i + ".jpg";
         fragment.appendChild(img);
       }
