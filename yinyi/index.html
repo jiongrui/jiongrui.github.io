@@ -23,18 +23,18 @@
     </div>
     <script>
       var fragment = document.createDocumentFragment();
-      for (let i = 1, ii = 11; i <= ii; i++) {
+      for (let i = 1, ii = 22; i <= ii; i++) {
         var img = document.createElement("img");
-        var srcPrev = i < 10 ? "images/zuopin1_0" : "images/zuopin1_";
-        img.src = srcPrev + i + ".jpg";
+        var srcPrev = i < 10 ? "images1/zuopin_(0" : "images1/zuopin_(";
+        img.src = srcPrev + i + ").jpg";
         fragment.appendChild(img);
       }
-      for (let i = 1, ii = 24; i <= ii; i++) {
-        var img = document.createElement("img");
-        var srcPrev = i < 10 ? "images/zuopin2_0" : "images/zuopin2_";
-        img.src = srcPrev + i + ".jpg";
-        fragment.appendChild(img);
-      }
+      // for (let i = 1, ii = 24; i <= ii; i++) {
+      //   var img = document.createElement("img");
+      //   var srcPrev = i < 10 ? "images/zuopin2_0" : "images/zuopin2_";
+      //   img.src = srcPrev + i + ".jpg";
+      //   fragment.appendChild(img);
+      // }
       document.getElementById("imgBox").appendChild(fragment);
     </script>
   </body>
