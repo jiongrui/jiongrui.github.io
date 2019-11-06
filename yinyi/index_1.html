@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>尹伊|作品集</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      h3{
+        padding: 20px 0;
+      }
+      .container .img-box img {
+        display: block;
+        width: 100%;
+      }
+      @media (min-width: 1000px) {
+        .container .img-box {
+          width: 1000px;
+          margin: 0 auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="img-box" id="imgBox">
+        <h3><a href="./尹伊作品集.pdf">点击查看高清作品集PDF。</a></h3>
+      </div>
+    </div>
+    <script>
+      var fragment = document.createDocumentFragment();
+      for (let i = 1, ii = 22; i <= ii; i++) {
+        var img = document.createElement("img");
+        // var srcPrev = i < 10 ? "./tinified/zuopin_(0" : "./tinified/zuopin_(";
+        img.src = "./tinified1/zuopin_ (" + i + ").jpg";
+        fragment.appendChild(img);
+      }
+      document.getElementById("imgBox").appendChild(fragment);
+
+      // let observer = new IntersectionObserver(
+      //   (entries, observer) => {
+      //     entries.forEach(entry => {
+      //       entry.target.src = entry.target.id;
+      //       observer.unobserve(entry.target);
+      //     });
+      //   },
+      //   { threshold: [0.01] }
+      // );
+
+      // document.querySelectorAll("img").forEach(img => {
+      //   observer.observe(img);
+      // });
+    </script>
+  </body>
+</html>
