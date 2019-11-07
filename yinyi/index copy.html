@@ -11,50 +11,31 @@
         margin: 0;
         padding: 0;
       }
-      h3 {
-        padding: 20px 0;
-      }
       .container .img-box img {
         display: block;
         width: 100%;
-      }
-      @media (min-width: 1000px) {
-        .container .img-box {
-          width: 1000px;
-          margin: 0 auto;
-        }
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <div class="img-box" id="imgBox">
-        <h3><a href="./尹伊作品集.pdf">点击查看高清作品集PDF。</a></h3>
-      </div>
+      <div class="img-box" id="imgBox"></div>
     </div>
     <script>
       var fragment = document.createDocumentFragment();
       for (let i = 1, ii = 22; i <= ii; i++) {
         var img = document.createElement("img");
-        var srcPrev = i < 10 ? "./tinified/zuopin_(0" : "./tinified/zuopin_(";
+        var srcPrev = i < 10 ? "images1/zuopin_(0" : "images1/zuopin_(";
         img.src = srcPrev + i + ").jpg";
         fragment.appendChild(img);
       }
+      // for (let i = 1, ii = 24; i <= ii; i++) {
+      //   var img = document.createElement("img");
+      //   var srcPrev = i < 10 ? "images/zuopin2_0" : "images/zuopin2_";
+      //   img.src = srcPrev + i + ".jpg";
+      //   fragment.appendChild(img);
+      // }
       document.getElementById("imgBox").appendChild(fragment);
-
-      // let observer = new IntersectionObserver(
-      //   (entries, observer) => {
-      //     entries.forEach(entry => {
-      //       entry.target.src = entry.target.id;
-      //       observer.unobserve(entry.target);
-      //     });
-      //   },
-      //   { threshold: [0.01] }
-      // );
-
-      // document.querySelectorAll("img").forEach(img => {
-      //   observer.observe(img);
-      // });
     </script>
   </body>
 </html>
