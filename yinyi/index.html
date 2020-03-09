@@ -50,19 +50,19 @@
   <body>
     <div class="container">
       <div class="img-box" id="imgBox">
-        <h3><a href="./yinyi_work.pdf">点击查看高清作品集PDF。</a></h3>
+        <h3><a href="./yinyi.pdf">点击查看高清作品集PDF。需要更清晰的请联系本人。</a></h3>
       </div>
     </div>
     <script>
       let fragment = document.createDocumentFragment();
-      for (let i = 1, ii = 23; i <= ii; i++) {
+      for (let i = 1, ii = 22; i <= ii; i++) {
         const div = document.createElement("div");
         const loadingImg = document.createElement("img");
         const finalShowImg = document.createElement("img");
         loadingImg.src = "./images/loading.gif";
         loadingImg.id = "loading" + i;
         loadingImg.className = "loading";
-        finalShowImg.src = "./images/yiyi-" + i + ".jpg";
+        finalShowImg.src = "./images/" + i + ".jpg";
         finalShowImg.style.display = "none";
         div.appendChild(loadingImg);
         div.appendChild(finalShowImg);
